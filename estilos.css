@@ -1,0 +1,23 @@
+html {
+    background-color: lightblue;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.caja {
+    padding:20px;
+    background-color: rgb(255, 4, 0);
+}
