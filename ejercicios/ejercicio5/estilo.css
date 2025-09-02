@@ -1,0 +1,11 @@
+header {
+	background: linear-gradient(90deg, #2196f3 0%, #21cbf3 100%);
+	color: white;
+}
+.card {
+	box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+form button {
+	background-color: #21cbf3;
+	border: none;
+}

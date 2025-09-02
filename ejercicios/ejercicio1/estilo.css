@@ -1,0 +1,25 @@
+table {
+	border-collapse: collapse;
+	width: 50%;
+	margin-bottom: 1rem;
+}
+th, td {
+	border: 1px solid #333;
+	padding: 0.5rem 1rem;
+}
+th {
+	background: #2196f3;
+	color: white;
+}
+ol, ul {
+	margin-left: 2rem;
+}
+body {
+	background-color: #f0f0f0;
+	color: #333;
+	font-family: Arial, sans-serif;
+}
+h1 {
+	color: #007bff;
+}
+

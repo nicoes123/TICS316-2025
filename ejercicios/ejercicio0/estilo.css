@@ -1,0 +1,13 @@
+h1 {
+    color: #060d74;
+}
+p {
+    font-size: 1.2rem;
+}
+a {
+    color: #2196f3;
+    text-decoration: underline;
+}
+img {
+    border-radius: 8px;
+}
