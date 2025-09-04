@@ -5,3 +5,6 @@ button.btn-primary {
 	background-color: #ff9800;
 	border: none;
 }
+#tarjeta {
+	max-width: 400px;
+}
