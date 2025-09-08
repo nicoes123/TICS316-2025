@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Flujo en JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Control de Flujo en JavaScript</h1>
+        <p>En esta página aprenderás sobre las estructuras básicas de control de flujo en JavaScript: <strong>if</strong>, bucles (<strong>for</strong>, <strong>while</strong>, <strong>do...while</strong>), <strong>try/catch</strong> y <strong>switch case</strong>.</p>
+        <h2>Condiciones: if</h2>
+        <pre><code class="language-js">let edad = 20;
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+</code></pre>
+        <h2>Bucles</h2>
+        <p>Permiten repetir acciones varias veces:</p>
+          <p>Los bucles permiten ejecutar un bloque de código varias veces. Existen diferentes tipos:</p>
+
+          <h3>Bucle for</h3>
+          <p>Se usa para repetir un bloque un número determinado de veces.</p>
+          <pre><code class="language-js">for (let i = 0; i < 5; i++) {
+            console.log(i);
+          }
+          </code></pre>
+
+          <h3>Bucle while</h3>
+          <p>Repite el bloque mientras la condición sea verdadera.</p>
+          <pre><code class="language-js">let contador = 0;
+          while (contador < 3) {
+            console.log(contador);
+            contador++;
+          }
+          </code></pre>
+
+          <h3>Bucle do...while</h3>
+          <p>Ejecuta el bloque al menos una vez y luego repite mientras la condición sea verdadera.</p>
+          <pre><code class="language-js">let num = 0;
+          do {
+            console.log(num);
+            num++;
+          } while (num < 2);
+          </code></pre>
+
+          <h3>Bucle for...of</h3>
+          <p>Recorre los valores de un array o colección.</p>
+          <pre><code class="language-js">let frutas = ["manzana", "banana", "uva"];
+          for (let fruta of frutas) {
+            console.log(fruta);
+          }
+          </code></pre>
+
+          <h3>Bucle for...in</h3>
+          <p>Recorre las propiedades de un objeto.</p>
+          <pre><code class="language-js">let persona = { nombre: "Ana", edad: 25, ciudad: "Santiago" };
+          for (let clave in persona) {
+            console.log(clave + ": " + persona[clave]);
+          }
+          </code></pre>
+
+          <h3>Break y Continue</h3>
+          <p><strong>break</strong> termina el bucle actual. <strong>continue</strong> salta a la siguiente iteración.</p>
+          <pre><code class="language-js">for (let i = 0; i < 5; i++) {
+            if (i === 3) {
+              break; // Termina el bucle cuando i es 3
+            }
+            console.log(i);
+          }
+
+          for (let i = 0; i < 5; i++) {
+            if (i % 2 === 0) {
+              continue; // Salta los números pares
+            }
+            console.log(i);
+          }
+          </code></pre>
+        <h2>Manejo de errores: try/catch</h2>
+        <pre><code class="language-js">try {
+  // Código que puede fallar
+  let resultado = 10 / 0;
+  console.log(resultado);
+} catch (error) {
+  console.log("Ocurrió un error:", error);
+}
+</code></pre>
+        <h2>Switch case</h2>
+        <pre><code class="language-js">let dia = "lunes";
+switch (dia) {
+  case "lunes":
+    console.log("Inicio de semana");
+    break;
+  case "viernes":
+    console.log("Fin de semana");
+    break;
+  default:
+    console.log("Día normal");
+}
+</code></pre>
+        
+</body>
+</html>

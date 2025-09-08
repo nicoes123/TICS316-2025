@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué es JavaScript?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">¿Qué es JavaScript?</h1>
+        <p>JavaScript es un lenguaje de programación interpretado, orientado a objetos, utilizado principalmente para
+            crear páginas web interactivas. Es uno de los tres pilares del desarrollo web junto con HTML y CSS.</p>
+        <h2>Paradigma</h2>
+        <p>JavaScript es multiparadigma: soporta programación orientada a objetos, funcional y basada en eventos.</p>
+        <h2>Tipos de variables</h2>
+        <ul>
+            <li><strong>let</strong>: Permite declarar variables con alcance de bloque.</li>
+            <li><strong>const</strong>: Permite declarar constantes, su valor no puede cambiar.</li>
+        </ul>
+        <h2>Tipos de datos</h2>
+        <ul>
+            <li><strong>String</strong>: Cadena de texto</li>
+            <li><strong>Number</strong>: Número</li>
+            <li><strong>Boolean</strong>: Verdadero o falso</li>
+            <li><strong>Object</strong>: Objeto</li>
+            <li><strong>Array</strong>: Lista ordenada</li>
+            <li><strong>Null</strong>: Ausencia de valor</li>
+            <li><strong>Undefined</strong>: Valor no definido</li>
+        </ul>
+        <h2>Declaración de variables</h2>
+        <pre><code class="language-js">let nombre = "Juan";
+const PI = 3.14;
+let edad = 20;
+</code></pre>
+        <h2>Objetos</h2>
+        <pre><code class="language-js">let persona = {
+  nombre: "Ana",
+  edad: 25,
+  esEstudiante: true
+};
+</code></pre>
+        <h2>Arrays</h2>
+        <pre><code class="language-js">let numeros = [1, 2, 3, 4, 5];
+</code></pre>
+        <h2>Funciones</h2>
+        <pre><code class="language-js">function saludar() {
+  console.log("Hola!");
+}
+</code></pre>
+        <h2>Operadores aritméticos</h2>
+        <p>Los operadores aritméticos permiten realizar operaciones matemáticas básicas:</p>
+        <ul>
+            <li><strong>+</strong> (Suma): <code>let suma = 2 + 3; // 5</code></li>
+            <li><strong>-</strong> (Resta): <code>let resta = 5 - 2; // 3</code></li>
+            <li><strong>*</strong> (Multiplicación): <code>let producto = 4 * 2; // 8</code></li>
+            <li><strong>/</strong> (División): <code>let division = 10 / 2; // 5</code></li>
+            <li><strong>%</strong> (Módulo): <code>let resto = 7 % 3; // 1</code></li>
+            <li><strong>**</strong> (Exponenciación): <code>let potencia = 2 ** 3; // 8</code></li>
+        </ul>
+        <h2>Operadores de comparación</h2>
+        <p>Los operadores de comparación permiten comparar valores y devuelven un valor booleano (<code>true</code> o
+            <code>false</code>):</p>
+        <ul>
+            <li><strong>==</strong> (Igualdad): <code>5 == "5" // true</code></li>
+            <li><strong>===</strong> (Igualdad estricta): <code>5 === "5" // false</code></li>
+            <li><strong>!=</strong> (Desigualdad): <code>3 != 4 // true</code></li>
+            <li><strong>!==</strong> (Desigualdad estricta): <code>3 !== "3" // true</code></li>
+            <li><strong>&gt;</strong> (Mayor que): <code>7 &gt; 5 // true</code></li>
+            <li><strong>&lt;</strong> (Menor que): <code>2 &lt; 4 // true</code></li>
+            <li><strong>&gt;=</strong> (Mayor o igual que): <code>6 &gt;= 6 // true</code></li>
+            <li><strong>&lt;=</strong> (Menor o igual que): <code>3 &lt;= 5 // true</code></li>
+        </ul>
+        <h2>Operadores lógicos</h2>
+        <p>Los operadores lógicos permiten combinar o invertir condiciones:</p>
+        <ul>
+            <li><strong>&&</strong> (AND): <code>true && false // false</code></li>
+            <li><strong>||</strong> (OR): <code>true || false // true</code></li>
+            <li><strong>!</strong> (NOT): <code>!true // false</code></li>
+        </ul>
+        <h3>Ejemplos de uso en variables</h3>
+<pre><code class="language-js">let edad = 20;
+let esEstudiante = true;
+let puedeEntrar = edad >= 18 && esEstudiante; // true
+let acceso = edad < 18 || esEstudiante; // true
+let noEstudiante = !esEstudiante; // false
+</code></pre>
+    <h2>Operador ternario</h2>
+        <p>El operador ternario es una forma corta de escribir una condición. Su sintaxis es <code>condición ? valorSiVerdadero : valorSiFalso</code>:</p>
+        <pre><code class="language-js">let edad = 20;
+    let mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+    console.log(mensaje); // "Mayor de edad"
+
+    function obtenerEstado(usuario) {
+      return usuario.activo ? "Activo" : "Inactivo";
+    }
+
+    // También se puede usar para asignar valores o ejecutar funciones:
+    let resultado = esEstudiante ? aprobar() : reprobar();
+    </code></pre>
+        <p>El operador ternario es útil para simplificar condicionales y hacer el código más legible cuando solo hay dos opciones posibles.</p>
+<h3>Ejemplos de uso en funciones</h3>
+<pre><code class="language-js">function puedeComprarAlcohol(edad) {
+  return edad >= 18;
+}
+
+function accesoCompleto(edad, esAdmin) {
+  return puedeComprarAlcohol(edad) || esAdmin;
+}
+
+function ejecutarSi(condicion, accion) {
+  condicion && accion(); // Ejecuta la función si la condición es true
+}
+
+// Ejemplo de secuencia de funciones
+function validarUsuario(usuario) {
+  return usuario.activo && usuario.verificado && !usuario.bloqueado;
+}
+</code></pre>
+<p>Los operadores lógicos permiten definir flujos de decisión, ejecutar funciones condicionalmente y combinar múltiples condiciones en una sola expresión.</p>
+        <h2>Tipos de memoria</h2>
+        <ul>
+            <li><strong>Primitivos</strong> (string, number, boolean, null, undefined): Se almacenan en la
+                <strong>stack</strong>.
+            </li>
+            <li><strong>Objetos y arrays</strong>: Se almacenan en la <strong>heap</strong> y la variable guarda una
+                referencia.</li>
+        </ul>
+        <h2>Ejemplo interactivo</h2>
+        <button id="btnSaludar" class="btn btn-primary">Saludar</button>
+        <div id="resultado" class="mt-3"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
